@@ -4,51 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bola2 : Tienda para fumadores</title>
+    <title>Bola2 : Para volar como gokú</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
-    <div>
-        <div class="logo"><img src="img/logo1.png" alt="" width="200px" height="100px"></div>
+    <header>
+        <a href="index.html" class="logo"><img src="img/logo1.png" alt="" width="200px" height="100px"></a>
         <h4>Tienda para fumadores</h4>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="descripcion.html">Ficha Producto</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-        <table>
-            <tr>
-                <div class="formulario">
-                    <form>
-                        <div class="Usuario">
-                            <label for="Usuario">Usuario:</label>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="Contraseña">
-                            <label for="Contraseña">Contraseña:</label>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="btnenviar">
-                            <button class="Enviar">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
+        <div class="menu">
+            <a class="Inicio" href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="descripcion.html">Ficha Producto</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+    <form class="form" onsubmit="return validaLogin();" method="POST">
+        <div class="contenedorAvatar">
+            <img src="img/avatar.PNG" alt="Avatar" class="imgAvatar">
+        </div>
+        <div class="contenedorLogin">
+            <label for="txtNombreUsuario"><b>Nombre Usuario</b></label>
+            <input type="text" name="txtNombreUsuario" id="txtNombreUsuario" placeholder="Ingrese Usuario">
+            <br>
+            <label for="txtContraseña"><b>Contraseña</b></label>
+            <input type="Password" name="txtContraseña" id="txtContraseña" placeholder="Ingrese Contraseña">
+
+            <button type="submit">Login</button>
+
+            <label>
+                <input type="checkbox" name="chkRecordar" id="chkRecordar"> Recordar sesion
+            </label>
+            <br>
+            <br>
+            <label>
+                Si no tienes cuenta, <a href="registro.html">registrate aquí</a>
+            </label>
+
+
+        </div>
+    </form>
+
     <br>
     <br>
     <div>
