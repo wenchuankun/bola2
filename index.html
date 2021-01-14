@@ -42,6 +42,33 @@
         <p>&copy; Bola2, Tienda para fumadores.</p>
     </footer>
 
+    <div id="modalLogin" class="modal">
+        <span onclick="document.getElementById('modalLogin').style.display = 'none'" class="cerrar" title="Cerrar Login">&times;</span>
+
+        <form class="form modalform animate" onsubmit="return validaLogin();" method="POST">
+            <div class="contenedorAvatar">
+                <img src="img/avatar.PNG" alt="Avatar" class="avatar">
+            </div>
+            <div class="contenedorLogin">
+                <label for="txtNombreUsuario"><b>Nombre de Usuario</b></label>
+                <input type="text" name="txtNombreUsuario" id="txtNombreUsuario" placeholder="Ingrese su nombre de usuario">
+
+                <label for="txtContraseña"><b>Contraseña</b></label>
+                <input type="password" name="txtContraseña" id="txtContraseña" placeholder="Ingrese su contraseña">
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" name="chkRecordar" id="chkRecordar">Recordar sesión
+                </label>
+                <br>
+                <br>
+                <label>
+                    Si no tienes cuenta, <a href="registro.html">registrate aquí</a>
+                </label>
+            </div>
+        </form>
+    </div>
+
 </body>
 
 </html>
