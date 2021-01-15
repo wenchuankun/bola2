@@ -17,7 +17,7 @@
             <a class="Inicio" href="index.html">Inicio</a>
             <a href="productos.html">Productos</a>
             <a href="descripcion.html">Ficha Producto</a>
-            <a href="login.html">Login</a>
+            <a href="login.html">login<img src="img/avatar.PNG" alt=""  height="20px"></a>
         </div>
     </header>
 
@@ -25,26 +25,37 @@
 
 
     <div class="formulario">
-            <p>¿No tienes cuenta? Registra tus datos</p>
+            <h4>Registro de datos</h4>
         <form>
             <div class="rut">
-            <label for="rut" >Rut:</label>
+            <label for="rut" >Ingrese su rut:</label>
             <br>
             <input type="number" id="rut" onchange="setErrorMessage()"><p> - </p><input type="text" onchange="setErrorMessage()" id="dv">
 
             </div>
-            <label for="nombre" class="datos">Nombre:</label>
+            <label for="nombre" class="datos">Ingrese su nombre completo:</label>
             <br>
             <input type="text">
             <br>
-            <label for="apellido" class="datos">Apellido:</label>
+            <label for="fecha" class="datos">Ingrese su fecha de nacimiento:</label>
             <br>
-            <input type="text">
+            <input type="date">
             <br>
-            <label for="correo" class="datos">Correo:</label>
+            <label for="correo" class="datos">Ingrese su correo electrónico:</label>
             <br>
-            <input type="text">
+            <input type="email">
             <br>
+            <label for="contraseña" class="datos">Ingrese su contraseña:</label>
+            <br>
+            <input type="password">
+            <br>
+            <label for="contraseña" class="datos">Reingrese su contraseña:</label>
+            <br>
+            <input type="password">
+            <br>
+
+
+
             <br>
             <div class="btn">
             <button class="enviar" onclick="enviarDatos(event)">Enviar</button>
@@ -54,11 +65,10 @@
 
     
     <footer>
-
-
-        <div class="line"></div>
+        <p><b>Contacto</b> +56912345678</p>
+        <p><b>Buscanos en nuestras redes sociales</b> <img src="img/fb.png" alt="" height="15px"> <img src="img/ig.png" alt="" height="15px"></p>
         <div class="copyright">
-            <p>&copy; Bola2, Tienda para fumadores.</p>
+            <p>&copy; Bola2, Tienda para fumadores</p>
         </div>
     </footer>
     <script src="util.js"></script>

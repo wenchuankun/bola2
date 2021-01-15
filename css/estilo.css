@@ -1,10 +1,9 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
 header {
     overflow: hidden;
-    background-color: white;
+    background-color: green;
     padding: 20px 10px;
 }
 
@@ -25,7 +24,7 @@ header a.logo {
 }
 
 header .menu a:hover {
-    background-color: #fac259;
+    background-color: #f3b643;
     color: white;
 }
 
@@ -34,17 +33,17 @@ header .menu {
 }
 
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f0b86f;
+    background-color: red;
     color: white;
     text-align: center;
 }
 
 section {
-    border: 1px solid #ff9e1e;
+    background-color: white;
+    border: solid 5px yellow;
     justify-content: space-evenly;
     flex-wrap: wrap;
     display: flex;
@@ -55,25 +54,24 @@ section article {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 30%;
-    border: 1px dashed #adabab;
 }
 
 section article p {
     margin: 5px;
     font-size: 16px;
+    text-align: justify;
 }
 
 section article img {
     width: 150px;
     margin-right: 10px;
-    float: left;
+    float: center;
+    border-radius: 100px;
 }
 
-.form {
-    border: 1px solid coral;
-}
 
-.form input[type=text],
+
+.form input[type=text], input[type=number],
 input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -121,63 +119,7 @@ input[type=password] {
     padding: 16px;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
 
-.modalform {
-    background-color: #fefefe;
-    margin: 5px auto;
-    width: 60%;
-}
-
-.cerrar {
-    position: absolute;
-    right: 20.5%;
-    top: 60px;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.cerrar:hover,
-.cerrar:focus {
-    color: red;
-    cursor: pointer;
-}
-
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;
-}
-
-@-webkit-keyframes animatezoom {
-    from {
-        -webkit-transform: scale(0);
-    }
-    to {
-        -webkit-transform: scale(1);
-    }
-}
-
-@keyframes animatezoom {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
 
 .number {
     display: inline-block;
@@ -192,25 +134,18 @@ input[type=password] {
     margin-right: 5px;
 }
 
-form {
-    border-radius: 5px;
-    font-size: 0.8em;
-    padding: 15px;
-    margin: 10px;
-    width: 300px;
-    padding-bottom: 20px;
+
+
+.formulario input[type=text], input[type=number],
+input[type=password], input[type=date], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid cadetblue;
+    box-sizing: border-box;
 }
 
-input,
-textarea {
-    border: 0;
-    outline: none;
-    width: 270px;
-}
-
-div.rut {
-    display: block;
-}
 
 div.rut>input#rut {
     width: 80%;
