@@ -9,7 +9,7 @@ header {
 
 header a {
     float: left;
-    color: white;
+    color: black;
     text-align: right;
     padding: 12px;
     text-decoration: none;
@@ -20,6 +20,7 @@ header a {
 }
 header .menu{
     background-color: yellow;
+    border-radius: 20px;
 }
 
 header a.logo {
@@ -42,7 +43,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: red;
-    color: white;
+    color:white;
     text-align: center;
 }
 
