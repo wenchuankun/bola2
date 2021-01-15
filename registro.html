@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola2 : Para volar como gokú</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="img/logo1.png" alt="" width="200px" height="100px"></a>
+        <div class="menu">
+            <a class="Inicio" href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="descripcion.html">Ficha Producto</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+
+
+
+    <div class="formulario">
+            <p>¿No tienes cuenta? Registra tus datos</p>
+        <form>
+            <div class="rut">
+            <label for="rut" >Rut:</label>
+            <br>
+            <input type="number" id="rut" onchange="setErrorMessage()"><p> - </p><input type="text" onchange="setErrorMessage()" id="dv">
+
+            </div>
+            <label for="nombre" class="datos">Nombre:</label>
+            <br>
+            <input type="text">
+            <br>
+            <label for="apellido" class="datos">Apellido:</label>
+            <br>
+            <input type="text">
+            <br>
+            <label for="correo" class="datos">Correo:</label>
+            <br>
+            <input type="text">
+            <br>
+            <br>
+            <div class="btn">
+            <button class="enviar" onclick="enviarDatos(event)">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    
+    <footer>
+
+
+        <div class="line"></div>
+        <div class="copyright">
+            <p>&copy; Bola2, Tienda para fumadores.</p>
+        </div>
+    </footer>
+    <script src="util.js"></script>
+
+</body>
+
+</html>
