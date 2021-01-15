@@ -2,20 +2,24 @@ body {
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
 header {
+    background-image: url(../img/marihuana.jpg);
     overflow: hidden;
-    background-color: green;
     padding: 20px 10px;
 }
 
 header a {
     float: left;
-    color: black;
+    color: white;
     text-align: right;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
+
+}
+header .menu{
+    background-color: yellow;
 }
 
 header a.logo {
@@ -30,6 +34,7 @@ header .menu a:hover {
 
 header .menu {
     float: right;
+    
 }
 
 footer {
@@ -42,7 +47,7 @@ footer {
 }
 
 section {
-    background-color: white;
+
     border: solid 5px yellow;
     justify-content: space-evenly;
     flex-wrap: wrap;
