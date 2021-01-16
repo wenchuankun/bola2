@@ -1,78 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bola2 : Para volar como gokú</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <head>
 
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
-    <header>
-        <a href="index.html" class="logo"><img src="img/logo1.png" alt="" width="200px" height="100px"></a>
-        <div class="menu">
-            <a class="Inicio" href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="descripcion.html">Ficha Producto</a>
-            <a href="login.html">login<img src="img/avatar.PNG" alt=""  height="20px"></a>
+  <title>Bola2 | Tienda para fumadores</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <img src="img/logo1.png" alt="" style="width: 20%;">
+  </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="tienda.html">Catálogo</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="productos.html">Descripción</a>
+            </li>
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="login.html">Login</a>
+            </li>
+          </ul>
         </div>
-    </header>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col">
+        <div class="contenedor">
+          <p>Registro de usuario</p>
+          <form action="" method="POST" class="registro" id="formregistro" >
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 10%;"><label for="txtrut">Rut</label></td>
+                <td><input type="text" name="txtrut" id="txtrut" placeholder="Ingrese su rut"><br></td>
+              </tr>
+              <tr>
+                <td ><label for="txtnombrecompleto">Nombre completo</label></td>
+                <td><input type="text" name="txtnombrecompleto" id="txtnombrecompleto" placeholder="Ingrese su nombre completo"><br></td>
+              </tr>
+              <tr>
+                <td><label for="txtfechanacimiendo">Fecha de nacimiento</label></td>
+                <td><input type="date" name="txtfechanacimiento" id="txtfechanacimiento"><br></td>
+              </tr>
+              <tr>
+                <td><label for="txtcelular">Teléfono celular</label></td>
+                <td><input type="tel" name="txtcelular" id="txtcelular" placeholder="Ingrese su teléfono celular"><br></td>
+              </tr>
+              <tr>
+                <td><label for="txtemail">Email</label></td>
+                <td><input type="email" name="txtemail" id="txtemail" placeholder="Ingrese su email"><br></td>
+              </tr>
+              <tr>
+                <td><label for="txtcontraseña">Contraseña</label></td>
+                <td><input type="password" name="txtcontraseña" id="txtcontraseña" placeholder="Ingrese su contraseña"><br></td>
+              </tr>
+              <tr>
+                <td><label for="txtrecontraseña">Contraseña</label></td>
+                <td><input type="password" name="txtrecontraseña" id="txtrecontraseña" placeholder="Re-ingrese su contraseña"><br></td>
+              </tr>
+            </table>
 
-
-
-
-    <div class="formulario">
-            <h4>Registro de datos</h4>
-        <form>
-            <div class="rut">
-            <label for="rut" >Ingrese su rut:</label>
-            <br>
-            <input type="number" id="rut" onchange="setErrorMessage()"><p> - </p><input type="text" onchange="setErrorMessage()" id="dv">
-
+            <hr>
+            <div class="botonera">
+              <button type="submit" id="btnguardar">Guardar</button>
+              <button type="button" id="btnlimpiar">Limpiar</button>
             </div>
-            <label for="nombre" class="datos">Ingrese su nombre completo:</label>
-            <br>
-            <input type="text">
-            <br>
-            <label for="fecha" class="datos">Ingrese su fecha de nacimiento:</label>
-            <br>
-            <input type="date">
-            <br>
-            <label for="correo" class="datos">Ingrese su correo electrónico:</label>
-            <br>
-            <input type="email">
-            <br>
-            <label for="contraseña" class="datos">Ingrese su contraseña:</label>
-            <br>
-            <input type="password">
-            <br>
-            <label for="contraseña" class="datos">Reingrese su contraseña:</label>
-            <br>
-            <input type="password">
-            <br>
-
-
-
-            <br>
-            <div class="btn">
-            <button class="enviar" onclick="enviarDatos(event)">Enviar</button>
-            </div>
-        </form>
+          </form>
+      </div>
+      </div>  
     </div>
 
-    
-    <footer>
-        <p><b>Contacto</b> +56912345678</p>
-        <p><b>Buscanos en nuestras redes sociales</b> <img src="img/fb.png" alt="" height="15px"> <img src="img/ig.png" alt="" height="15px"></p>
-        <div class="copyright">
-            <p>&copy; Bola2, Tienda para fumadores</p>
-        </div>
-    </footer>
-    <script src="util.js"></script>
 
-</body>
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0 small"> &copy; Bola2 | Tienda virtual para fumadores</p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/messages_es.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#formregistro').validate({
+        debug:true,
+        rules: {
+          txtrut: {
+            required: true,
+            maxlength: 10,
+            minlength: 9,
+          },
+          txtnombrecompleto: {
+            required: true,
+          },
+          txtfechanacimiento: {
+            required: true,
+            date: true,
+            dateFormat: true,
+          },
+          txtcelular: {
+            required: true,
+            number: true,
+            minlength: 9,
+            maxlength: 9,
+            
+          },
+          txtemail: {
+            required: true,
+            email: true,
+          },
+          txtcontraseña: {
+            required: true,
+            
+          },
+          txtrecontraseña: {
+            equalTo: "txtcontraseña"
+          }
+
+        },
+        messages: {
+          txtrut: {
+            required : "El campo rut es requerido"
+          }
+        }
+      })
+    })
+  </script>
+
+  </body>
 
 </html>
+
+
