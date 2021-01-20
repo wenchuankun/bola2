@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 class Producto(models.Model):
     nombre = models.CharField(verbose_name="Nombre", max_length=50)
     tamaño = models.CharField(verbose_name="Tamaño", max_length=20)
@@ -8,6 +9,7 @@ class Producto(models.Model):
     color = models.CharField(verbose_name="Color", choices=COLOR, max_length=1)
     MATERIAL = [('1','Plastico'),('2','Vidrio'),('3','Metal')]
     material = models.CharField(verbose_name="Material", choices=MATERIAL, max_length=1)
+    precio = models.IntegerField(verbose_name="Precio", max_length=50)
 
     def __str__(self):
         return self.nombre
