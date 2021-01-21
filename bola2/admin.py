@@ -1,7 +1,11 @@
 from django.contrib import admin
+<<<<<<< HEAD
 from bola2.models import Cliente, Producto, Galeria
 
 
+=======
+from .models import models
+>>>>>>> 1ead3ebdbf2452d969121d1f744324523091294a
 # Register your models here.
 
 class ClientesAdmin (admin.ModelAdmin):
