@@ -17,3 +17,5 @@ admin.site.register(Cliente, ClientesAdmin)
 admin.site.register(Producto, ProductoAdmin)
 admin.site.register(Pedido, PedidoAdmin)
 admin.site.register(Galeria)
+
+
