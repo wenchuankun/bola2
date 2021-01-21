@@ -1,5 +1,5 @@
 from django.contrib import admin
-from bola2.models import Cliente, Producto, Galeria, Pedido
+from bola2.models import Cliente, Producto, Pedido, Galeria
 class ClientesAdmin (admin.ModelAdmin):
     list_display=("nombre", "direccion", "Telefono")
     search_fields=("nombre", "Telefono")
@@ -15,6 +15,7 @@ class PedidoAdmin (admin.ModelAdmin):
 
 admin.site.register(Cliente, ClientesAdmin)
 admin.site.register(Producto, ProductoAdmin)
-admin.site.register(Galeria)
 admin.site.register(Pedido, PedidoAdmin)
+admin.site.register(Galeria)
+
 
