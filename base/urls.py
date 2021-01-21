@@ -18,4 +18,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('galeria/', admin.site.urls),
+    path('producto/', admin.site.urls),
+    path('pedido/', admin.site.urls),
 ]
