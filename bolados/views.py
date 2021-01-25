@@ -6,6 +6,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Producto, Pedido, Cliente
 
 
 
@@ -15,6 +16,7 @@ def Inicio(request):
     return render( request, "bolados/Inicio.html")
 
 def Producto(request):
+
     return render( request, "bolados/Producto.html")
 
 def Pedido(request):

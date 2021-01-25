@@ -24,6 +24,10 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.nombre + ' ' + self.precio
+    
+    def get_absolute_url(self):
+        return Reversible("producto", args=[str(self.id)])
+    
 
 class Pedido(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.DO_NOTHING, verbose_name="Producto")
