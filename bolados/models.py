@@ -1,3 +1,4 @@
+from typing import Reversible
 from django.db import models
 
 # Create your models here.
@@ -27,11 +28,10 @@ class Producto(models.Model):
 class Pedido(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.DO_NOTHING, verbose_name="Producto")
     numero = models.IntegerField(verbose_name="Numero del pedido")
-    fecha = models.DateTimeField(verbose_name="Fecha del pedido")
+    fecha = models.DateField(verbose_name="Fecha del pedido")
     ESTADO = [('E', 'Envío'), ('R', 'Retiro en tienda')]
     estado = models.CharField(verbose_name="Entrega", choices=ESTADO, max_length=1)
     entrega = models.DateField(verbose_name="Fecha de entrega", null=True, blank=True)
 
-    def __str__(self):
-        return self.numero + ' ' + self.estado + ' ' + self.entrega
-
+    def get_absolute_url(self):
+        return Reversible(args=[str(self.id)])
