@@ -1,0 +1,45 @@
+{% extends "ProyectowebApp/base.html" %} {% load static %} {% block content %}
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta text-center " style="background-color:rgba(24, 64, 8);">
+                    <h2 class="section-heading mb-4">
+                        {% if form.errors %}
+                            <p>Tu nombre de usuario o contraseña  no existen. Intente nuevamente.</p>
+                        {% endif %}
+                        {% if next %}
+                            {% if user.is_authenticated %}
+                                <p>Acceso restringido. Intente nuevamente.</p>
+                            {% else %}
+                                <p style="color:black">Iniciar sesión para ver.</p>
+                            {% endif %}
+                        {% endif %}
+
+                        <form action="{% url 'login' %}" method="post" style="color:white">
+                            {% csrf_token %}
+                            <div>
+                                <div>{{ form.username.label_tag }}</div>
+                                <div>{{ form.username }}</div>
+                            </div>
+                            <div>
+                                <div>{{ form.password.label_tag }}</div>
+                                <div>{{ form.password }}</div>
+                            </div>
+                            <div>
+                                <input type="submit" value="Inicio de sesión">
+                                <input type="hidden" name="next" value="{{ next }}">        
+                            </div>
+
+                        </form>
+                        <br>
+                        <p><strong>-- OR --</strong></p>
+                        <a href="{% url 'social:begin' 'facebook' %}">Iniciar sesión con Facebook</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
